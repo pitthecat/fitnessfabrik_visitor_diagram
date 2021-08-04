@@ -4,7 +4,7 @@ My local gym Fitnessfabrik started offering a [visitor count](http://besucher.fi
 but it doesn't offer a history function or diagrams. So I created this small project to scrape the data from the website and create useful diagrams out of it. The diagrams offer an easy way to find less busy time spots in the gym :)
 
 <p align="center">
-  <img src="fitness_fabrik_visitor_count.png">
+  <img src="pictures/fitness_fabrik_visitor_count.png">
 </p>
 <p align="center">
      <em>Original website</em>
@@ -12,16 +12,16 @@ but it doesn't offer a history function or diagrams. So I created this small pro
 
 ## Script
 
-The Python script uses the BeautifulSoup lib to scrape the visitor count from http://besucher.fitnessfabrik.de every minute. It writes the data to a simple .csv file 
-and uses the pandas and plotly lib to render a HTML diagram from the data.
+The Python 3 script uses the Beautiful Soup lib to scrape the visitor count from http://besucher.fitnessfabrik.de every minute. It writes the data to a simple .csv file 
+and uses the pandas and Plotly lib to render a HTML diagram from the data.
 
 I run the script on a Raspberry Pi 3 and has proven to be very reliable for the job.
 
 <p align="center">
-  <img src="sample_count.png">
+  <img src="pictures/sample_count.png">
 </p>
 <p align="center">
-     <em>This a rendered HTML diagram</em>
+     <em>This a rendered HTML diagram by the script</em>
 </p>
 
 ## Trigger
@@ -44,7 +44,7 @@ There multiple options to view the diagrams with the visitor statistics.
   * The script copies the rendered HTML files to the ```/var/www/html/``` directory which can be served via Nginx
 
 <p align="center">
-  <img src="nginx_dir_listing.png">
+  <img src="pictures/nginx_dir_listing.png">
 </p>
 <p align="center">
      <em>Nginx hosting the HTML files with directory listing enabled</em>
@@ -52,4 +52,4 @@ There multiple options to view the diagrams with the visitor statistics.
 
 ## Disclaimer:
 
-I am not associated with the company running the gym. This is just a small hobby project.
+I am not associated with the company running the gym. This is just a small hobby project by a customer. 
