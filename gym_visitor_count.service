@@ -1,0 +1,11 @@
+[Unit]
+Description=Gym visitor count
+After=multi-user.target
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/usr/bin/python3 /home/pi/fitness/gym_visitor_count.py
+
+[Install]
+WantedBy=multi-user.target
