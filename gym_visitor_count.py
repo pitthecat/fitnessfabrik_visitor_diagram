@@ -54,13 +54,14 @@ def create_graph():
     plotly.offline.plot(fig, filename=file_name_plot)
 
 def copy_graph():
+    logging.info("Copying file to the html dir")
     shutil.copy2(file_name_plot, '/var/www/html/{}.html'.format(todays_date)) # The user running the scripts needs the correct permission for the dir
 
 def run_all():
     while True:
         write_to_file()
         create_graph()
-        #copy_graph()
+        copy_graph()
         time.sleep(60)
 
 # Run
