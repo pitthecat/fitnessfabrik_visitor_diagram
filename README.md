@@ -28,9 +28,9 @@ I run the script on a Raspberry Pi 3 and has proven to be very reliable for the 
 * A simple way to start the script is to just run ```python3 get_count.py```
 * It's recommended to set the script up as a systemd service and trigger it via cron
   * ```50 5 * * 1-5 systemctl start gym_visitor_count``` -> Start at 5:50 GMT during the week
-  * ```10 22 * * 1-5 systemctl stop gym_visitor_count``` -> Stop at 22:10 GMT during the week
+  * ```10 23 * * 1-5 systemctl stop gym_visitor_count``` -> Stop at 23:10 GMT during the week
   * ``` 50 8 * * 6,0 systemctl start gym_visitor_count``` -> Start at 08:50 GMT on weekends
-  * ``` 10 20 * * 6,0 systemctl stop gym_visitor_count``` -> Stop at 20:10 GMT on weekends
+  * ``` 10 21 * * 6,0 systemctl stop gym_visitor_count``` -> Stop at 21:10 GMT on weekends
 * One could also use [systemd timers](https://wiki.archlinux.org/title/Systemd/Timers) to schedule the service
 
 ##  View the diagrams
