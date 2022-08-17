@@ -41,7 +41,7 @@ def write_to_file():
             activity_status_writer.writerow([ISO_8601_time, current_count])
             print(ISO_8601_time, current_count)
     except:
-        logging.error("Error: Count variable emtpy")
+        logging.error("Count variable emtpy")
 
 def create_document_for_today():
     with open(file_name.format(file_name), mode='w') as activity_status:
